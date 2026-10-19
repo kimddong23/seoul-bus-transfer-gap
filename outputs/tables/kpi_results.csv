@@ -1,89 +1,89 @@
 kpi_id,group_code,location_id,period_start,period_end,value,unit,numerator,denominator,n_valid_pairs,n_valid_days,n_records,method_version,threshold_config_hash,source_manifest_ref,status,limitations
-A1,장애인,SEOUL_ALL,20260901,20260930,0.27882761963350294,분,39885.73333333333,143048.0,16943.0,30.0,144680.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A1,장애인,STRATUM_BB,20260901,20260930,0.3578547038060159,분,49744.666666666664,139008.0,16392.0,30.0,140639.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,장애인,STRATUM_BB_same,20260901,20260930,0.3529002684142643,분,30370.95,86061.0,9358.0,30.0,86880.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,장애인,STRATUM_BB_diff,20260901,20260930,0.3659077316310021,분,19373.716666666667,52947.0,7034.0,30.0,53759.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,장애인,STRATUM_BS,20260901,20260930,-0.30575757575757573,분,-16.816666666666666,55.0,10.0,9.0,55.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,장애인,STRATUM_SB,20260901,20260930,0.8357923497267759,분,152.95,183.0,29.0,21.0,183.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,장애인,STRATUM_SS,20260901,20260930,-2.6288970717166404,분,-9995.066666666668,3802.0,512.0,30.0,3803.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,장애인,SEOUL_ALL,20260801,20260831,0.2695445685959468,분,36739.73333333333,136303.0,16334.0,31.0,137828.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A1,장애인,SEOUL_ALL,20261001,20261013,0.2890915902415633,분,16076.383333333333,55610.0,6689.0,13.0,56219.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A5,장애인,SEOUL_ALL,20260901,20260930,90.52397160964101,%,321533.0,355191.0,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(a) 유효성 통과 대응 행 비율
-A5,장애인,SEOUL_ALL,20260901,20260930,18.664244838564862,%,144680.0,775172.0,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(c) 대상 집단 기록 중 유효 경로-일에 들어간 비율
-A5,장애인,SEOUL_ALL,20260901,20260930,100.0,%,723.0,723.0,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(d) 자격 경로의 정류장 ID 중 정류소 위치정보(2026-09-02) 매칭 비율. 역 ID는 마스터 미확보로 미산출
-A4,장애인,110000183>110000183,20260901,20260930,7.23186274509804,분,,,15.0,15.0,102.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,110000183>110000183,20260901,20260930,93.33333333333333,%,14.0,15.0,15.0,15.0,102.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,120000001>120000674,20260901,20260930,3.521171171171171,분,,,17.0,17.0,113.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,120000001>120000674,20260901,20260930,82.3529411764706,%,14.0,17.0,17.0,17.0,113.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,105000289>105000488,20260901,20260930,3.2090277777777776,분,,,16.0,16.0,121.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,105000289>105000488,20260901,20260930,81.25,%,13.0,16.0,16.0,16.0,121.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,115000040>115000039,20260901,20260930,2.5455696202531644,분,,,19.0,19.0,160.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,115000040>115000039,20260901,20260930,68.42105263157895,%,13.0,19.0,19.0,19.0,160.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,118000170>118000170,20260901,20260930,2.201116427432217,분,,,24.0,24.0,210.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,118000170>118000170,20260901,20260930,75.0,%,18.0,24.0,24.0,24.0,210.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,105000480>105000488,20260901,20260930,2.123038348082596,분,,,29.0,29.0,566.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,105000480>105000488,20260901,20260930,86.20689655172414,%,25.0,29.0,29.0,29.0,566.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,100000398>100000398,20260901,20260930,0.9030845771144278,분,,,30.0,30.0,671.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,100000398>100000398,20260901,20260930,66.66666666666667,%,20.0,30.0,30.0,30.0,671.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,118000130>118000130,20260901,20260930,0.6838503200393895,분,,,30.0,30.0,677.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,118000130>118000130,20260901,20260930,80.0,%,24.0,30.0,30.0,30.0,677.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,105000015>105000015,20260901,20260930,0.5661490683229814,분,,,30.0,30.0,805.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,105000015>105000015,20260901,20260930,73.33333333333333,%,22.0,30.0,30.0,30.0,805.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,116900161>116000016,20260901,20260930,4.03768115942029,분,,,8.0,8.0,46.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 2. 우선 확인 후보이지 시설결함 지점 아님
-A2,장애인,116900161>116000016,20260901,20260930,87.5,%,7.0,8.0,8.0,8.0,46.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,장애인,COUNT,20260901,20260930,565.0,경로,,,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,자격 경로 중 M>0 후보 수(표시 상한 10은 목표 아님)
-A3,장애인,ELIGIBLE_PATHS,20260901,20260930,842.0,경로,,,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A2,장애인,ELIGIBLE_MEDIAN_R,20260901,20260930,55.172413793103445,%,,,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,경로,SEOUL_ALL,20260901,20260930,-0.3317784709940071,분,-95296.06666666667,287228.0,28017.0,30.0,292322.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A1,경로,STRATUM_BB,20260901,20260930,0.39933713451319147,분,90978.58333333333,227824.0,23999.0,30.0,232409.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,경로,STRATUM_BB_same,20260901,20260930,0.3610253780721656,분,51398.1,142367.0,13178.0,30.0,144936.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,경로,STRATUM_BB_diff,20260901,20260930,0.46316256518873034,분,39580.48333333333,85457.0,10821.0,30.0,87473.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,경로,STRATUM_BS,20260901,20260930,1.2871148459383754,분,459.5,357.0,63.0,29.0,359.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,경로,STRATUM_SB,20260901,20260930,0.8849936143039592,분,692.95,783.0,118.0,30.0,788.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,경로,STRATUM_SS,20260901,20260930,-3.216859467252506,분,-187427.1,58264.0,3837.0,30.0,58766.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,경로,SEOUL_ALL,20260801,20260831,-0.32991214785653417,분,-88662.9,268747.0,26965.0,31.0,273260.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A1,경로,SEOUL_ALL,20261001,20261013,-0.47935925077482816,분,-56917.2,118736.0,11506.0,13.0,120931.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A5,경로,SEOUL_ALL,20260901,20260930,94.15236314301961,%,442067.0,469523.0,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(a) 유효성 통과 대응 행 비율
-A5,경로,SEOUL_ALL,20260901,20260930,27.410138456258657,%,292322.0,1066474.0,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(c) 대상 집단 기록 중 유효 경로-일에 들어간 비율
-A5,경로,SEOUL_ALL,20260901,20260930,98.96907216494846,%,960.0,970.0,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(d) 자격 경로의 정류장 ID 중 정류소 위치정보(2026-09-02) 매칭 비율. 역 ID는 마스터 미확보로 미산출
-A4,경로,108900171>108900171,20260901,20260930,7.530778588807786,분,,,18.0,18.0,140.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,108900171>108900171,20260901,20260930,77.77777777777777,%,14.0,18.0,18.0,18.0,140.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,121000532>119000286,20260901,20260930,4.734805890227577,분,,,26.0,26.0,251.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,121000532>119000286,20260901,20260930,92.3076923076923,%,24.0,26.0,26.0,26.0,251.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,107000085>107000086,20260901,20260930,3.5784913353720693,분,,,28.0,28.0,333.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,107000085>107000086,20260901,20260930,89.28571428571429,%,25.0,28.0,28.0,28.0,333.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,100000363>100000363,20260901,20260930,2.6234126984126984,분,,,29.0,29.0,379.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,100000363>100000363,20260901,20260930,93.10344827586206,%,27.0,29.0,29.0,29.0,379.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,105000480>105000488,20260901,20260930,2.58493265993266,분,,,29.0,29.0,803.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,105000480>105000488,20260901,20260930,86.20689655172414,%,25.0,29.0,29.0,29.0,803.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,107000060>107000060,20260901,20260930,0.5700881834215167,분,,,30.0,30.0,947.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,107000060>107000060,20260901,20260930,70.0,%,21.0,30.0,30.0,30.0,947.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,121000020>121000020,20260901,20260930,0.5312072336265884,분,,,30.0,30.0,1366.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,121000020>121000020,20260901,20260930,76.66666666666667,%,23.0,30.0,30.0,30.0,1366.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,105000083>105000083,20260901,20260930,6.647736625514403,분,,,14.0,14.0,81.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 2. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,105000083>105000083,20260901,20260930,92.85714285714286,%,13.0,14.0,14.0,14.0,81.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,107000058>107000060,20260901,20260930,6.58733850129199,분,,,19.0,19.0,129.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 2. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,107000058>107000060,20260901,20260930,89.47368421052632,%,17.0,19.0,19.0,19.0,129.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,122000297>122000301,20260901,20260930,3.8338652482269504,분,,,25.0,25.0,199.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 2. 우선 확인 후보이지 시설결함 지점 아님
-A2,경로,122000297>122000301,20260901,20260930,72.0,%,18.0,25.0,25.0,25.0,199.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A4,경로,COUNT,20260901,20260930,819.0,경로,,,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,자격 경로 중 M>0 후보 수(표시 상한 10은 목표 아님)
-A3,경로,ELIGIBLE_PATHS,20260901,20260930,1325.0,경로,,,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A2,경로,ELIGIBLE_MEDIAN_R,20260901,20260930,52.94117647058823,%,,,,,,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,어린이,SEOUL_ALL,20260901,20260930,0.1608205120003412,분,100554.63333333333,625260.0,46512.0,30.0,633451.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A1,어린이,STRATUM_BB,20260901,20260930,-0.053113565142331724,분,-5660.95,106582.0,12655.0,30.0,112384.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,어린이,STRATUM_BB_same,20260901,20260930,0.047328865785682975,분,3022.8,63868.0,7147.0,30.0,66915.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,어린이,STRATUM_BB_diff,20260901,20260930,-0.20329985484852742,분,-8683.75,42714.0,5508.0,30.0,45469.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,어린이,STRATUM_BS,20260901,20260930,0.3565554944719321,분,68100.31666666667,190995.0,14349.0,30.0,191985.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,어린이,STRATUM_SB,20260901,20260930,0.24724580693098236,분,59230.7,239562.0,15865.0,30.0,240840.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,어린이,STRATUM_SS,20260901,20260930,-0.23961863044374593,분,-21115.433333333334,88121.0,3643.0,30.0,88242.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,어린이,SEOUL_ALL,20260801,20260831,0.19736504431018004,분,135302.81666666668,685546.0,50048.0,31.0,692025.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A1,어린이,SEOUL_ALL,20261001,20261013,0.24660677383224747,분,78163.25,316955.0,21834.0,13.0,320600.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A1,청소년,SEOUL_ALL,20260901,20260930,-0.0034931137503138193,분,-3668.5833333333335,1050233.0,65409.0,30.0,1060743.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A1,청소년,STRATUM_BB,20260901,20260930,-0.10709004389630533,분,-18963.933333333334,177084.0,18433.0,30.0,183901.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,청소년,STRATUM_BB_same,20260901,20260930,0.0004303794235214487,분,44.93333333333333,104404.0,9972.0,30.0,107596.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,청소년,STRATUM_BB_diff,20260901,20260930,-0.2615419189139607,분,-19008.866666666665,72680.0,8461.0,30.0,76305.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,청소년,STRATUM_BS,20260901,20260930,0.08021452164361521,분,27652.833333333332,344736.0,20810.0,30.0,346482.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,청소년,STRATUM_SB,20260901,20260930,0.011775638749844235,분,5008.45,425323.0,21296.0,30.0,427177.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,청소년,STRATUM_SS,20260901,20260930,-0.1684541015940764,분,-17365.933333333334,103090.0,4870.0,30.0,103183.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
-A1,청소년,SEOUL_ALL,20260801,20260831,0.03676964478517289,분,31626.233333333334,860118.0,59349.0,31.0,867014.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
-A1,청소년,SEOUL_ALL,20261001,20261013,0.03850198318471413,분,17430.733333333334,452723.0,27968.0,13.0,456888.0,registry_v1@3a76607,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,장애인,SEOUL_ALL,20260901,20260930,0.27882761963350294,분,39885.73333333333,143048.0,16943.0,30.0,144680.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,장애인,STRATUM_BB,20260901,20260930,0.3578547038060159,분,49744.666666666664,139008.0,16392.0,30.0,140639.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,장애인,STRATUM_BB_same,20260901,20260930,0.3529002684142643,분,30370.95,86061.0,9358.0,30.0,86880.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,장애인,STRATUM_BB_diff,20260901,20260930,0.3659077316310021,분,19373.716666666667,52947.0,7034.0,30.0,53759.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,장애인,STRATUM_BS,20260901,20260930,-0.30575757575757573,분,-16.816666666666666,55.0,10.0,9.0,55.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,장애인,STRATUM_SB,20260901,20260930,0.8357923497267759,분,152.95,183.0,29.0,21.0,183.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,장애인,STRATUM_SS,20260901,20260930,-2.6288970717166404,분,-9995.066666666668,3802.0,512.0,30.0,3803.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,장애인,SEOUL_ALL,20260801,20260831,0.2695445685959468,분,36739.73333333333,136303.0,16334.0,31.0,137828.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,장애인,SEOUL_ALL,20261001,20261013,0.2890915902415633,분,16076.383333333333,55610.0,6689.0,13.0,56219.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A5,장애인,SEOUL_ALL,20260901,20260930,90.52397160964101,%,321533.0,355191.0,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(a) 유효성 통과 대응 행 비율
+A5,장애인,SEOUL_ALL,20260901,20260930,18.664244838564862,%,144680.0,775172.0,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(c) 대상 집단 기록 중 유효 경로-일에 들어간 비율
+A5,장애인,SEOUL_ALL,20260901,20260930,100.0,%,723.0,723.0,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(d) 자격 경로의 정류장 ID 중 정류소 위치정보(2026-09-02) 매칭 비율. 역 ID는 마스터 미확보로 미산출
+A4,장애인,110000183>110000183,20260901,20260930,7.23186274509804,분,,,15.0,15.0,102.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,110000183>110000183,20260901,20260930,93.33333333333333,%,14.0,15.0,15.0,15.0,102.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,120000001>120000674,20260901,20260930,3.521171171171171,분,,,17.0,17.0,113.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,120000001>120000674,20260901,20260930,82.3529411764706,%,14.0,17.0,17.0,17.0,113.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,105000289>105000488,20260901,20260930,3.2090277777777776,분,,,16.0,16.0,121.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,105000289>105000488,20260901,20260930,81.25,%,13.0,16.0,16.0,16.0,121.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,115000040>115000039,20260901,20260930,2.5455696202531644,분,,,19.0,19.0,160.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,115000040>115000039,20260901,20260930,68.42105263157895,%,13.0,19.0,19.0,19.0,160.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,118000170>118000170,20260901,20260930,2.201116427432217,분,,,24.0,24.0,210.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,118000170>118000170,20260901,20260930,75.0,%,18.0,24.0,24.0,24.0,210.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,105000480>105000488,20260901,20260930,2.123038348082596,분,,,29.0,29.0,566.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,105000480>105000488,20260901,20260930,86.20689655172414,%,25.0,29.0,29.0,29.0,566.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,100000398>100000398,20260901,20260930,0.9030845771144278,분,,,30.0,30.0,671.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,100000398>100000398,20260901,20260930,66.66666666666667,%,20.0,30.0,30.0,30.0,671.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,118000130>118000130,20260901,20260930,0.6838503200393895,분,,,30.0,30.0,677.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,118000130>118000130,20260901,20260930,80.0,%,24.0,30.0,30.0,30.0,677.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,105000015>105000015,20260901,20260930,0.5661490683229814,분,,,30.0,30.0,805.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,105000015>105000015,20260901,20260930,73.33333333333333,%,22.0,30.0,30.0,30.0,805.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,116900161>116000016,20260901,20260930,4.03768115942029,분,,,8.0,8.0,46.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 2. 우선 확인 후보이지 시설결함 지점 아님
+A2,장애인,116900161>116000016,20260901,20260930,87.5,%,7.0,8.0,8.0,8.0,46.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,장애인,COUNT,20260901,20260930,565.0,경로,,,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,자격 경로 중 M>0 후보 수(표시 상한 10은 목표 아님)
+A3,장애인,ELIGIBLE_PATHS,20260901,20260930,842.0,경로,,,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A2,장애인,ELIGIBLE_MEDIAN_R,20260901,20260930,55.172413793103445,%,,,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,경로,SEOUL_ALL,20260901,20260930,-0.3317784709940071,분,-95296.06666666667,287228.0,28017.0,30.0,292322.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,경로,STRATUM_BB,20260901,20260930,0.39933713451319147,분,90978.58333333333,227824.0,23999.0,30.0,232409.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,경로,STRATUM_BB_same,20260901,20260930,0.3610253780721656,분,51398.1,142367.0,13178.0,30.0,144936.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,경로,STRATUM_BB_diff,20260901,20260930,0.46316256518873034,분,39580.48333333333,85457.0,10821.0,30.0,87473.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,경로,STRATUM_BS,20260901,20260930,1.2871148459383754,분,459.5,357.0,63.0,29.0,359.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,경로,STRATUM_SB,20260901,20260930,0.8849936143039592,분,692.95,783.0,118.0,30.0,788.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,경로,STRATUM_SS,20260901,20260930,-3.216859467252506,분,-187427.1,58264.0,3837.0,30.0,58766.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,경로,SEOUL_ALL,20260801,20260831,-0.32991214785653417,분,-88662.9,268747.0,26965.0,31.0,273260.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,경로,SEOUL_ALL,20261001,20261013,-0.47935925077482816,분,-56917.2,118736.0,11506.0,13.0,120931.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A5,경로,SEOUL_ALL,20260901,20260930,94.15236314301961,%,442067.0,469523.0,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(a) 유효성 통과 대응 행 비율
+A5,경로,SEOUL_ALL,20260901,20260930,27.410138456258657,%,292322.0,1066474.0,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(c) 대상 집단 기록 중 유효 경로-일에 들어간 비율
+A5,경로,SEOUL_ALL,20260901,20260930,98.96907216494846,%,960.0,970.0,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,(d) 자격 경로의 정류장 ID 중 정류소 위치정보(2026-09-02) 매칭 비율. 역 ID는 마스터 미확보로 미산출
+A4,경로,108900171>108900171,20260901,20260930,7.530778588807786,분,,,18.0,18.0,140.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,108900171>108900171,20260901,20260930,77.77777777777777,%,14.0,18.0,18.0,18.0,140.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,121000532>119000286,20260901,20260930,4.734805890227577,분,,,26.0,26.0,251.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,121000532>119000286,20260901,20260930,92.3076923076923,%,24.0,26.0,26.0,26.0,251.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,107000085>107000086,20260901,20260930,3.5784913353720693,분,,,28.0,28.0,333.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,107000085>107000086,20260901,20260930,89.28571428571429,%,25.0,28.0,28.0,28.0,333.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,100000363>100000363,20260901,20260930,2.6234126984126984,분,,,29.0,29.0,379.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,100000363>100000363,20260901,20260930,93.10344827586206,%,27.0,29.0,29.0,29.0,379.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,105000480>105000488,20260901,20260930,2.58493265993266,분,,,29.0,29.0,803.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,105000480>105000488,20260901,20260930,86.20689655172414,%,25.0,29.0,29.0,29.0,803.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,107000060>107000060,20260901,20260930,0.5700881834215167,분,,,30.0,30.0,947.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,107000060>107000060,20260901,20260930,70.0,%,21.0,30.0,30.0,30.0,947.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,121000020>121000020,20260901,20260930,0.5312072336265884,분,,,30.0,30.0,1366.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 1. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,121000020>121000020,20260901,20260930,76.66666666666667,%,23.0,30.0,30.0,30.0,1366.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,105000083>105000083,20260901,20260930,6.647736625514403,분,,,14.0,14.0,81.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 2. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,105000083>105000083,20260901,20260930,92.85714285714286,%,13.0,14.0,14.0,14.0,81.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,107000058>107000060,20260901,20260930,6.58733850129199,분,,,19.0,19.0,129.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 2. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,107000058>107000060,20260901,20260930,89.47368421052632,%,17.0,19.0,19.0,19.0,129.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,122000297>122000301,20260901,20260930,3.8338652482269504,분,,,25.0,25.0,199.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,파레토 층 2. 우선 확인 후보이지 시설결함 지점 아님
+A2,경로,122000297>122000301,20260901,20260930,72.0,%,18.0,25.0,25.0,25.0,199.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A4,경로,COUNT,20260901,20260930,819.0,경로,,,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,자격 경로 중 M>0 후보 수(표시 상한 10은 목표 아님)
+A3,경로,ELIGIBLE_PATHS,20260901,20260930,1325.0,경로,,,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A2,경로,ELIGIBLE_MEDIAN_R,20260901,20260930,52.94117647058823,%,,,,,,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,어린이,SEOUL_ALL,20260901,20260930,0.1608205120003412,분,100554.63333333333,625260.0,46512.0,30.0,633451.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,어린이,STRATUM_BB,20260901,20260930,-0.053113565142331724,분,-5660.95,106582.0,12655.0,30.0,112384.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,어린이,STRATUM_BB_same,20260901,20260930,0.047328865785682975,분,3022.8,63868.0,7147.0,30.0,66915.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,어린이,STRATUM_BB_diff,20260901,20260930,-0.20329985484852742,분,-8683.75,42714.0,5508.0,30.0,45469.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,어린이,STRATUM_BS,20260901,20260930,0.3565554944719321,분,68100.31666666667,190995.0,14349.0,30.0,191985.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,어린이,STRATUM_SB,20260901,20260930,0.24724580693098236,분,59230.7,239562.0,15865.0,30.0,240840.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,어린이,STRATUM_SS,20260901,20260930,-0.23961863044374593,분,-21115.433333333334,88121.0,3643.0,30.0,88242.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,어린이,SEOUL_ALL,20260801,20260831,0.19736504431018004,분,135302.81666666668,685546.0,50048.0,31.0,692025.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,어린이,SEOUL_ALL,20261001,20261013,0.24660677383224747,분,78163.25,316955.0,21834.0,13.0,320600.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,청소년,SEOUL_ALL,20260901,20260930,-0.0034931137503138193,분,-3668.5833333333335,1050233.0,65409.0,30.0,1060743.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,청소년,STRATUM_BB,20260901,20260930,-0.10709004389630533,분,-18963.933333333334,177084.0,18433.0,30.0,183901.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,청소년,STRATUM_BB_same,20260901,20260930,0.0004303794235214487,분,44.93333333333333,104404.0,9972.0,30.0,107596.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,청소년,STRATUM_BB_diff,20260901,20260930,-0.2615419189139607,분,-19008.866666666665,72680.0,8461.0,30.0,76305.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,청소년,STRATUM_BS,20260901,20260930,0.08021452164361521,분,27652.833333333332,344736.0,20810.0,30.0,346482.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,청소년,STRATUM_SB,20260901,20260930,0.011775638749844235,분,5008.45,425323.0,21296.0,30.0,427177.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,청소년,STRATUM_SS,20260901,20260930,-0.1684541015940764,분,-17365.933333333334,103090.0,4870.0,30.0,103183.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,
+A1,청소년,SEOUL_ALL,20260801,20260831,0.03676964478517289,분,31626.233333333334,860118.0,59349.0,31.0,867014.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
+A1,청소년,SEOUL_ALL,20261001,20261013,0.03850198318471413,분,17430.733333333334,452723.0,27968.0,13.0,456888.0,registry_v1@4699d86,9bc1252e2fe2,outputs/validation/download_manifest.csv,OK,"관측 차이, 인과·차별·시설결함 아님. 카드 분류 ≠ 장애·연령 전수"
