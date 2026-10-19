@@ -1,0 +1,142 @@
+# KPI 사전등록서 v1(2026-10-19). 카드 유형 간 환승시간 차이를 한 번도 계산하지 않은 상태에서 작성
+# 작성 전 본 것: 열 구성, 행 수, 중복 키, 내부 일관성, 전체 환승시간 분포(집단 구분 없음), 집단별 건수(시간 값 제외).
+# 근거 파일: outputs/validation/data_quality.csv. 초안 대비 변경과 등록 뒤 추가 점검은 docs/kpi_changelog.md에만 기록
+
+meta:
+  version: 1
+  source_dataset: "서울시 정류장별 사용자유형별 환승 승객수 및 환승시간 정보 (서울 열린데이터광장 OA-21221, 원본시스템 TOPIS, 공공누리 1유형)"
+  files: "kscc_dx_trnsf_path_sum_YYYYMMDD.csv (월별 ZIP 2026-08, 2026-09 / 일별 ZIP 2026-10-01~13)"
+  periods:
+    main: [2026-09-01, 2026-09-30]          # 탐색·주 분석
+    validation_prior: [2026-08-01, 2026-08-31]   # 검증(이전 기간)
+    validation_later: [2026-10-01, 2026-10-13]   # 검증(이후 기간)
+  reference_group: 일반
+  target_groups_primary: [장애인, 경로]
+  target_groups_secondary: [어린이, 청소년]   # A1만 기술통계로 보고
+  time_unit: >
+    원자료 환승_시간_평균은 초로 판단. 근거[확인-구조]: 시간대별 최댓값이 07~20시 1,980, 21~06시 3,960으로
+    서울 환승 인정시간 30분·60분(1,800·3,600초)의 1.1배와 정확히 일치. 분 단위라면 1,980분(33시간)이 되어 불가능.
+    공식 정의 문서 확인 전까지 보고서에는 '초(구조 근거)'로 표기. 분 표시는 /60.
+  row_validity:   # 행 단위 유효성 (결과를 보기 전 확정)
+    V1: "n_all == n_일반+n_어린이+n_청소년+n_경로+n_장애인 (목록에 없는 유형이 섞인 행 제외, 9월 0.37%)"
+    V2: "|t_all - Σ_g n_g·t_g / Σ_g n_g| <= 1초 (집단 평균의 분모가 건수와 다른 것으로 보이는 행 제외, 9월 약 0.9%)"
+    sensitivity: "V1·V2 미적용 결과를 함께 보고"
+  cell: >
+    원자료 1행 = (날짜, 하차ID, 승차ID, 시간대, 숨은 구분값). 같은 키가 여러 행으로 나뉘는 경우가 있다(버스가 낀 경로만,
+    노선 등으로 추정·미확인). 모든 카드유형이 같은 행에 있으므로 행 자체가 가장 좁은 '같은 조건' 비교 칸이다.
+    행을 합치지 않고 행 단위로 비교한다.
+  matched_row: "유효 행 중 n_g >= 1 이고 n_일반 >= 1"
+  delta: "Δ_i = (t_g,i - t_일반,i) / 60  [분]"
+  weight: "w_i = min(n_g,i, n_일반,i)  (양 집단 균형 가중; 1인당 추가시간·인과효과 아님)"
+  path: "p = (하차ID, 승차ID). 경로유형: BB(정류장→정류장), BS(정류장→역), SB(역→정류장), SS(역→역). BB는 같은 정류장(하차ID=승차ID)과 다른 정류장으로 다시 나눈다"
+  path_day: "u = (p, 날짜). Δ_u = Σ w_i Δ_i / Σ w_i, 지지량 S_u = Σ w_i. 유효 경로-일: S_u >= m"
+  sensitivity_grid:   # 초안 그리드 유지. 주 설정은 결과 확인 뒤 바꾸지 않음
+    m_min_support: [1, 5, 10]       # 주: 5
+    min_valid_days: [5, 7, 14]      # 주: 7
+    min_target_records: [10, 30, 50]  # 주: 30
+    tau_minutes: [0, 2, 5]          # 주: 0
+  uncertainty: "날짜 단위 군집 부트스트랩(1,000회, seed 20261019)으로 M_g의 95% 구간. 개별 승객 복원 아님"
+
+kpis:
+  - id: A1
+    name: 같은 조건 비교 환승시간 차이
+    level: A
+    primary: true
+    purpose: 같은 경로·같은 날·같은 시간대(같은 행)에서 대상 카드와 일반 카드의 평균 환승시간 차이의 도시 전체 대표값
+    unit: 분
+    population: 기간 내 유효 경로-일(S_u >= 5)에 속한 대응 행
+    analysis_granularity: 행 → 경로-일 → 전체
+    source_field_candidates: ["환승_수_합_{g}", "환승_수_합_일반", "환승_시간_평균_{g}", "환승_시간_평균_일반"]
+    exact_numerator: "Σ_i w_i Δ_i"
+    exact_denominator: "Σ_i w_i"
+    aggregation_formula: "M_g = Σ_i w_i Δ_i / Σ_i w_i (유효 경로-일에 속한 행 전체)"
+    weighting_scheme: "w = min(n_g, n_일반). 보조: 비가중 경로-일 Δ_u 중앙값, 집단별 가중 평균시간"
+    strata_reported: [전체, BB_같은정류장, BB_다른정류장, BS, SB, SS]
+    validity_rule: V1, V2, matched_row
+    excluded_cases: 유효성 실패 행, 한 집단만 있는 행, S_u < m 경로-일
+    missing_handling: "n_g = 0이면 t_g = 0으로 기록됨 → 결측으로 처리(0을 시간으로 쓰지 않음)"
+    metric_direction: "양수 = 대상 카드의 관측 환승시간이 더 김. 좋다/나쁘다 방향 아님"
+    minimum_support: "경로-일 S_u >= 5. 산출 불가 시 NA"
+    display_precision: 소수 둘째 자리(분), 표본은 정수
+    robustness: 날짜 군집 부트스트랩 95% 구간, 민감도 그리드, 검증기간(8월·10월) 재산출
+    baseline_source: 2026-09 원자료 실측
+    target_status: "목표값 없음(공식 기준 없음)"
+    measurement_period: main, validation_prior, validation_later
+    reproducible_code_path: scripts/04_kpis.py
+    factual_claim_limits: >
+      카드 분류는 장애 여부·연령의 전수 대표가 아님. 환승시간은 하차 태그~다음 승차 태그 간격으로 추정되며(공식 정의 확인 중)
+      걷기·대기·차량 선택이 섞여 있음. 차이는 인과·차별·시설결함의 증거가 아님. 같은 행 안에서도 개인 동선·목적 차이는 남는다.
+
+  - id: A2
+    name: 반복적 양(+)의 차이 관측률
+    level: A
+    primary: false
+    unit: "%"
+    population: A4 자격 경로의 유효 경로-일
+    exact_numerator: "Δ_u > τ 인 유효 경로-일 수"
+    exact_denominator: "유효 경로-일 수"
+    aggregation_formula: "R(p,g) = 100 × 분자/분모, 분모 0이면 NA"
+    tau: "주 0분, 민감도 2·5분(연구자 시나리오, 공인 기준 아님)"
+    factual_claim_limits: "Δ_u > 0은 일반 카드보다 관측시간이 긴 날일 뿐 기준 초과·차별 아님. 유효일 7일 미만이면 '지속' 주장 금지"
+    reproducible_code_path: scripts/04_kpis.py
+
+  - id: A3
+    name: 관측 규모와 표본 조건
+    level: A
+    primary: false
+    unit: 건, 일, 경로
+    definition: "N_g(p) = 유효 경로-일에 속한 대응 행의 n_g 합(환승 기록 건수, 고유 인원 아님). 유효 일수, 유효 경로-일 수, 대응 경로 수, 제외 비율을 함께 표로"
+    reproducible_code_path: scripts/04_kpis.py
+
+  - id: A4
+    name: 현장 확인 우선 후보
+    level: A
+    primary: false
+    unit: 경로 목록, 개수
+    eligibility: "유효 일수 >= 7 그리고 N_g(p) >= 30 (주 설정)"
+    path_effect: "M_g(p) = 해당 경로 유효 경로-일 전체 행의 Σ w Δ / Σ w"
+    selection: >
+      M_g(p) > 0 인 자격 경로에서 (M_g(p) 큼, N_g(p) 큼) 두 축의 파레토 비지배 층을 차례로 구하고
+      층 번호 → M_g(p) 순으로 정렬. 반복률 R(p,g)는 별도 열. 임의 가중합 점수 만들지 않음. 표시 상한 10개(성공 목표 아님)
+    holdout_check: >
+      9월에 고른 후보의 8월·10월 M_g(p)를 다시 계산해 '같은 방향(>0) 유지 비율'을 보고하고,
+      9월 자격 경로 전체의 같은 비율(기준선)과 비교. 9월·8월 둘 다 자격인 경로의 M_g(p) 스피어만 순위상관도 보고
+    factual_claim_limits: "'우선 확인할 경로'이지 시설결함 지점이 아님. 후보 0개면 0개로 보고"
+    reproducible_code_path: scripts/04_kpis.py
+
+  - id: A5
+    name: 대응·유효성 커버리지
+    level: A
+    primary: false
+    unit: "%"
+    definition: >
+      (a) 유효성 통과 대응 행 / 유효성 적용 전 대응 행, (b) 유효 경로-일(S_u>=m)에 속한 대응 행의 w 합 / 전체 대응 행 w 합,
+      (c) 대상 집단 기록 중 대응 행에 들어간 비율, (d) ID와 위치 마스터 매칭률(역·정류장 각각)
+    factual_claim_limits: 대표성·자료 결함 진단용이며 개선효과 아님
+    reproducible_code_path: scripts/04_kpis.py
+
+  - id: B1
+    name: 현장점검 이행률
+    level: B
+    definition: "점검 완료 대상 수 / 확정 점검 대상 수 × 100"
+    status: "정책 시행 시 기관이 측정. 현재 값 N/A"
+  - id: B2
+    name: 원인 분류 완료율
+    level: B
+    definition: "원인(시설·안내·배차·측정한계 등) 분류 기록 대상 수 / 점검 완료 대상 수 × 100"
+    status: N/A
+  - id: B3
+    name: 후속 재측정 완료율
+    level: B
+    definition: "후속 관측기간 자료가 확보된 개선 대상 수 / 개선 조치 완료 대상 수 × 100"
+    status: N/A
+  - id: C1
+    name: 시행 전후 격차 변화
+    level: C
+    definition: "같은 경로·집단·기간 정의에서 M_g(p)_post - M_g(p)_pre [분]"
+    status: "미래 평가 설계. 현재 N/A(정책 미시행)"
+  - id: C2
+    name: 비교 경로 대비 변화(DiD)
+    level: C
+    definition: "조치 경로의 변화 - 비조치 비교 경로의 변화. 시간추세 가정 점검 후에만"
+    status: N/A

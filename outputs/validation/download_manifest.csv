@@ -1,0 +1,21 @@
+source_id,seq,file_name,official_url,retrieval_utc,bytes,sha256,status,notes
+OA-21221,2609,kscc_dx_trnsf_path_sum_202609.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:00:07+00:00,234060526,c096004ee86a2110ac21d1d4b70af609a56504302db579b92b810e8288d4e225,OK,
+OA-21221,2608,kscc_dx_trnsf_path_sum_202608.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:01:12+00:00,250596043,e36fb92f8caf72c8263b217d621ab78ad8f44cfe161488f2b6e23d5ddbe36a29,OK,
+OA-21221,261001,kscc_dx_trnsf_path_sum_20261001.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:22+00:00,7314307,4ecf0023cd87210444e51f9720faaade2d5ab019d86ed4a4afb7c7ea72f5806c,OK,
+OA-21221,261002,kscc_dx_trnsf_path_sum_20261002.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:31+00:00,7603672,234618dbb2897405dbcd84cfbf9ce42712a07f6ae49e49ed5964bd333e0f4970,OK,
+OA-21221,261003,kscc_dx_trnsf_path_sum_20261003.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:43+00:00,5850172,89bf7831adc3a0bd5cd740cb91e615dc36de98a12cfbade383706203c285c99d,OK,
+OA-21221,261004,kscc_dx_trnsf_path_sum_20261004.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:44+00:00,5271705,29966182219d9ead6e1b2e8519c9b7ba7c14e7d8976e545ba28ed6dec6aa7fb4,OK,
+OA-21221,261005,kscc_dx_trnsf_path_sum_20261005.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:45+00:00,5222587,fdfa0cccfcff8d864d5f708d623ca7b7094b26f11096a9a715e634ed8198ec9f,OK,
+OA-21221,261006,kscc_dx_trnsf_path_sum_20261006.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:46+00:00,7274041,f9b3886a742ce3cb5207345ff0b1bb72fb7c5a17b84efc915bd24b3a2645e6fc,OK,
+OA-21221,261007,kscc_dx_trnsf_path_sum_20261007.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:48+00:00,7369653,57858d701f7182302c52c368fec19821370244d7aaf8376d69bfb37b1805c19d,OK,
+OA-21221,261008,kscc_dx_trnsf_path_sum_20261008.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:49+00:00,7575579,75cb7185ff948a7f7303c365eab735283eefff42e575494e6f8856d9a3dfcd7d,OK,
+OA-21221,261009,kscc_dx_trnsf_path_sum_20261009.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:51+00:00,5747764,26a7409c32cbcd39a41e6668e91d7da0d50fbf3022a19a25c3a8d87d6c6ef55f,OK,
+OA-21221,261010,kscc_dx_trnsf_path_sum_20261010.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:54+00:00,5993537,1813425f50179e06af4b3b015dcead4e1ed5ef9b0f0fd8121e53f1e5947a66b6,OK,
+OA-21221,261011,kscc_dx_trnsf_path_sum_20261011.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:57+00:00,5128067,e549a00a926899bc9ff8a6b2f18045a5277fa359755ca9414766f866787b0aec,OK,
+OA-21221,261012,kscc_dx_trnsf_path_sum_20261012.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:02:59+00:00,7194459,bd2ac24ef932851d26752c1ab63291448f8f7296253733da1e4ae4b27d71b81f,OK,
+OA-21221,261013,kscc_dx_trnsf_path_sum_20261013.zip,https://data.seoul.go.kr/dataList/OA-21221/F/1/datasetView.do,2026-10-19T01:03:01+00:00,7195165,d8a62f54134e301e61e27d4ea9c231f7c6b1a80817ddd6eb2b6c87474c62192a,OK,
+OA-15067,58,서울시버스정류소위치정보(20260902).xlsx,https://data.seoul.go.kr/dataList/OA-15067/F/1/datasetView.do,2026-10-19T01:23:24+00:00,741052,73eb0a5f4fd0f6128237b5e23fa361fd1c6d8a31a83bcee2884e6a48481852bb,OK,
+OA-15067,31,컬럼정의_서울시 버스정류소 위치정보.xlsx,https://data.seoul.go.kr/dataList/OA-15067/F/1/datasetView.do,2026-10-19T01:23:25+00:00,9207,04d179b155b79f8eecc09748d1da7c10ac5f6d5c2184294414be54f7836cb347,OK,
+OA-21231,2,,https://data.seoul.go.kr/dataList/OA-21231/F/1/datasetView.do,2026-10-19T01:23:25+00:00,,,FAIL,unexpected response: ''
+OA-21231,2,,https://data.seoul.go.kr/dataList/OA-21231/F/1/datasetView.do,2026-10-19T02:27:55+00:00,,,FAIL,unexpected response: ''
+OA-21231,2,자치구정류장코드분류.xlsx,https://data.seoul.go.kr/dataList/OA-21231/F/1/datasetView.do,2026-10-19T02:28:24+00:00,14128,fbe3c948bbc7a0dd5efe2f58ddebbccbb4089f3e71ba001f23631c75f9a3e48e,OK,

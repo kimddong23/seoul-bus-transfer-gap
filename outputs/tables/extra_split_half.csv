@@ -1,0 +1,3 @@
+group,n_paths_both_halves,spearman_odd_even,top10_pos_in_odd,top10_pos_in_even,top10_with_both
+장애인,813,0.2836615950485679,10,10,10
+경로,1150,0.3104480188974097,10,10,10

@@ -1,0 +1,520 @@
+[
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260819.csv",
+  "bytes": 52273605,
+  "compressed": 9770982,
+  "parquet": "kscc_dx_trnsf_path_sum_20260819.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260820.csv",
+  "bytes": 52192806,
+  "compressed": 7282015,
+  "parquet": "kscc_dx_trnsf_path_sum_20260820.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260816.csv",
+  "bytes": 34420780,
+  "compressed": 4900996,
+  "parquet": "kscc_dx_trnsf_path_sum_20260816.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260813.csv",
+  "bytes": 51814529,
+  "compressed": 9683230,
+  "parquet": "kscc_dx_trnsf_path_sum_20260813.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260818.csv",
+  "bytes": 51913372,
+  "compressed": 9699246,
+  "parquet": "kscc_dx_trnsf_path_sum_20260818.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260814.csv",
+  "bytes": 52834234,
+  "compressed": 9883842,
+  "parquet": "kscc_dx_trnsf_path_sum_20260814.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260817.csv",
+  "bytes": 35518067,
+  "compressed": 5017469,
+  "parquet": "kscc_dx_trnsf_path_sum_20260817.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260815.csv",
+  "bytes": 38764172,
+  "compressed": 7256304,
+  "parquet": "kscc_dx_trnsf_path_sum_20260815.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260811.csv",
+  "bytes": 51158398,
+  "compressed": 9537068,
+  "parquet": "kscc_dx_trnsf_path_sum_20260811.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260810.csv",
+  "bytes": 50741263,
+  "compressed": 9451551,
+  "parquet": "kscc_dx_trnsf_path_sum_20260810.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260812.csv",
+  "bytes": 51653388,
+  "compressed": 9644481,
+  "parquet": "kscc_dx_trnsf_path_sum_20260812.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260804.csv",
+  "bytes": 50328254,
+  "compressed": 9354195,
+  "parquet": "kscc_dx_trnsf_path_sum_20260804.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260807.csv",
+  "bytes": 52161675,
+  "compressed": 9712616,
+  "parquet": "kscc_dx_trnsf_path_sum_20260807.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260805.csv",
+  "bytes": 51008052,
+  "compressed": 9490369,
+  "parquet": "kscc_dx_trnsf_path_sum_20260805.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260809.csv",
+  "bytes": 35516918,
+  "compressed": 6642643,
+  "parquet": "kscc_dx_trnsf_path_sum_20260809.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260806.csv",
+  "bytes": 50897324,
+  "compressed": 9464266,
+  "parquet": "kscc_dx_trnsf_path_sum_20260806.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260808.csv",
+  "bytes": 42591998,
+  "compressed": 7960719,
+  "parquet": "kscc_dx_trnsf_path_sum_20260808.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260803.csv",
+  "bytes": 50306918,
+  "compressed": 9366991,
+  "parquet": "kscc_dx_trnsf_path_sum_20260803.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260801.csv",
+  "bytes": 42481978,
+  "compressed": 7936050,
+  "parquet": "kscc_dx_trnsf_path_sum_20260801.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260802.csv",
+  "bytes": 35240933,
+  "compressed": 6575184,
+  "parquet": "kscc_dx_trnsf_path_sum_20260802.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260821.csv",
+  "bytes": 53601247,
+  "compressed": 7473942,
+  "parquet": "kscc_dx_trnsf_path_sum_20260821.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260827.csv",
+  "bytes": 53886423,
+  "compressed": 7510502,
+  "parquet": "kscc_dx_trnsf_path_sum_20260827.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260828.csv",
+  "bytes": 54248574,
+  "compressed": 7576971,
+  "parquet": "kscc_dx_trnsf_path_sum_20260828.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260829.csv",
+  "bytes": 44039931,
+  "compressed": 6225612,
+  "parquet": "kscc_dx_trnsf_path_sum_20260829.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260822.csv",
+  "bytes": 41936735,
+  "compressed": 5933822,
+  "parquet": "kscc_dx_trnsf_path_sum_20260822.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260826.csv",
+  "bytes": 53507841,
+  "compressed": 10002394,
+  "parquet": "kscc_dx_trnsf_path_sum_20260826.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260825.csv",
+  "bytes": 53356216,
+  "compressed": 9959811,
+  "parquet": "kscc_dx_trnsf_path_sum_20260825.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260823.csv",
+  "bytes": 37322399,
+  "compressed": 5327089,
+  "parquet": "kscc_dx_trnsf_path_sum_20260823.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260824.csv",
+  "bytes": 52358560,
+  "compressed": 9769016,
+  "parquet": "kscc_dx_trnsf_path_sum_20260824.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260830.csv",
+  "bytes": 36510687,
+  "compressed": 5195622,
+  "parquet": "kscc_dx_trnsf_path_sum_20260830.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202608.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260831.csv",
+  "bytes": 50270306,
+  "compressed": 6986001,
+  "parquet": "kscc_dx_trnsf_path_sum_20260831.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260920.csv",
+  "bytes": 38050903,
+  "compressed": 7135273,
+  "parquet": "kscc_dx_trnsf_path_sum_20260920.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260916.csv",
+  "bytes": 52847214,
+  "compressed": 9903814,
+  "parquet": "kscc_dx_trnsf_path_sum_20260916.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260917.csv",
+  "bytes": 53367154,
+  "compressed": 9992296,
+  "parquet": "kscc_dx_trnsf_path_sum_20260917.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260919.csv",
+  "bytes": 46073521,
+  "compressed": 8675458,
+  "parquet": "kscc_dx_trnsf_path_sum_20260919.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260918.csv",
+  "bytes": 55556563,
+  "compressed": 10447391,
+  "parquet": "kscc_dx_trnsf_path_sum_20260918.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260910.csv",
+  "bytes": 52761084,
+  "compressed": 7390275,
+  "parquet": "kscc_dx_trnsf_path_sum_20260910.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260911.csv",
+  "bytes": 54646508,
+  "compressed": 7655841,
+  "parquet": "kscc_dx_trnsf_path_sum_20260911.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260913.csv",
+  "bytes": 36802677,
+  "compressed": 5245283,
+  "parquet": "kscc_dx_trnsf_path_sum_20260913.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260915.csv",
+  "bytes": 52919781,
+  "compressed": 9898021,
+  "parquet": "kscc_dx_trnsf_path_sum_20260915.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260912.csv",
+  "bytes": 45091952,
+  "compressed": 6420884,
+  "parquet": "kscc_dx_trnsf_path_sum_20260912.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260914.csv",
+  "bytes": 52326295,
+  "compressed": 7322450,
+  "parquet": "kscc_dx_trnsf_path_sum_20260914.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260905.csv",
+  "bytes": 46660898,
+  "compressed": 6682261,
+  "parquet": "kscc_dx_trnsf_path_sum_20260905.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260906.csv",
+  "bytes": 37313049,
+  "compressed": 5311411,
+  "parquet": "kscc_dx_trnsf_path_sum_20260906.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260908.csv",
+  "bytes": 52779143,
+  "compressed": 9884029,
+  "parquet": "kscc_dx_trnsf_path_sum_20260908.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260909.csv",
+  "bytes": 52783486,
+  "compressed": 9894807,
+  "parquet": "kscc_dx_trnsf_path_sum_20260909.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260907.csv",
+  "bytes": 52328000,
+  "compressed": 9801555,
+  "parquet": "kscc_dx_trnsf_path_sum_20260907.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260903.csv",
+  "bytes": 54015335,
+  "compressed": 7572376,
+  "parquet": "kscc_dx_trnsf_path_sum_20260903.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260901.csv",
+  "bytes": 51685467,
+  "compressed": 9634683,
+  "parquet": "kscc_dx_trnsf_path_sum_20260901.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260902.csv",
+  "bytes": 53621314,
+  "compressed": 10046880,
+  "parquet": "kscc_dx_trnsf_path_sum_20260902.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260904.csv",
+  "bytes": 55298631,
+  "compressed": 7753920,
+  "parquet": "kscc_dx_trnsf_path_sum_20260904.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260921.csv",
+  "bytes": 53427384,
+  "compressed": 10011678,
+  "parquet": "kscc_dx_trnsf_path_sum_20260921.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260927.csv",
+  "bytes": 33388022,
+  "compressed": 4759754,
+  "parquet": "kscc_dx_trnsf_path_sum_20260927.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260928.csv",
+  "bytes": 50671925,
+  "compressed": 7104592,
+  "parquet": "kscc_dx_trnsf_path_sum_20260928.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260929.csv",
+  "bytes": 51965168,
+  "compressed": 7270005,
+  "parquet": "kscc_dx_trnsf_path_sum_20260929.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260922.csv",
+  "bytes": 54321625,
+  "compressed": 10187697,
+  "parquet": "kscc_dx_trnsf_path_sum_20260922.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260924.csv",
+  "bytes": 33142078,
+  "compressed": 4686172,
+  "parquet": "kscc_dx_trnsf_path_sum_20260924.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260925.csv",
+  "bytes": 25448323,
+  "compressed": 3625576,
+  "parquet": "kscc_dx_trnsf_path_sum_20260925.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260923.csv",
+  "bytes": 55454035,
+  "compressed": 7793781,
+  "parquet": "kscc_dx_trnsf_path_sum_20260923.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260926.csv",
+  "bytes": 31931974,
+  "compressed": 4552379,
+  "parquet": "kscc_dx_trnsf_path_sum_20260926.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_202609.zip",
+  "member": "kscc_dx_trnsf_path_sum_20260930.csv",
+  "bytes": 52693403,
+  "compressed": 7395102,
+  "parquet": "kscc_dx_trnsf_path_sum_20260930.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261001.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261001.csv",
+  "bytes": 52156645,
+  "compressed": 7314123,
+  "parquet": "kscc_dx_trnsf_path_sum_20261001.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261002.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261002.csv",
+  "bytes": 53817499,
+  "compressed": 7603488,
+  "parquet": "kscc_dx_trnsf_path_sum_20261002.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261003.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261003.csv",
+  "bytes": 40932693,
+  "compressed": 5849988,
+  "parquet": "kscc_dx_trnsf_path_sum_20261003.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261004.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261004.csv",
+  "bytes": 36756943,
+  "compressed": 5271521,
+  "parquet": "kscc_dx_trnsf_path_sum_20261004.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261005.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261005.csv",
+  "bytes": 36857453,
+  "compressed": 5222403,
+  "parquet": "kscc_dx_trnsf_path_sum_20261005.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261006.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261006.csv",
+  "bytes": 51837115,
+  "compressed": 7273857,
+  "parquet": "kscc_dx_trnsf_path_sum_20261006.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261007.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261007.csv",
+  "bytes": 52415737,
+  "compressed": 7369469,
+  "parquet": "kscc_dx_trnsf_path_sum_20261007.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261008.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261008.csv",
+  "bytes": 53744613,
+  "compressed": 7575395,
+  "parquet": "kscc_dx_trnsf_path_sum_20261008.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261009.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261009.csv",
+  "bytes": 40301127,
+  "compressed": 5747580,
+  "parquet": "kscc_dx_trnsf_path_sum_20261009.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261010.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261010.csv",
+  "bytes": 42011616,
+  "compressed": 5993353,
+  "parquet": "kscc_dx_trnsf_path_sum_20261010.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261011.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261011.csv",
+  "bytes": 35894162,
+  "compressed": 5127883,
+  "parquet": "kscc_dx_trnsf_path_sum_20261011.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261012.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261012.csv",
+  "bytes": 51150067,
+  "compressed": 7194275,
+  "parquet": "kscc_dx_trnsf_path_sum_20261012.parquet"
+ },
+ {
+  "zip": "kscc_dx_trnsf_path_sum_20261013.zip",
+  "member": "kscc_dx_trnsf_path_sum_20261013.csv",
+  "bytes": 51224900,
+  "compressed": 7194981,
+  "parquet": "kscc_dx_trnsf_path_sum_20261013.parquet"
+ }
+]
