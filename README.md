@@ -37,6 +37,8 @@
 
 ## 방법
 
+![분석 파이프라인](docs/architecture/analysis-pipeline.png)
+
 - 비교 단위: 원자료 1행(같은 날·같은 1시간 시간대·같은 하차→승차 정류장 쌍). 대상 카드와 일반 카드가 함께 기록된 행을 '대응 행'으로 씀. 같은 키(날짜·하차ID·승차ID·시간대)가 여러 행으로 나뉜 경우(74일 6,399,241개 키, `data_quality.csv`의 dup_keys)도 합치지 않고 행 단위로 비교함
 - 차이·가중치: 행마다 차이 = 대상 카드 평균 − 일반 카드 평균, 가중치 = 두 카드 건수 중 작은 값. 경로·기간 단위 차이는 이 가중치로 낸 가중 평균
 - 품질 규칙: 카드 유형별 건수 합이 전체 건수와 다르거나(V1) 전체 평균이 유형별 평균의 건수 가중 평균과 1초 넘게 다른(V2) 행은 제외
@@ -59,11 +61,27 @@
 - 추가 점검(사전등록 외): 정류장 사이 거리별, 상한 기록 제외, 평일·주말, 시간대, 정류장 종류, 시설 이름 정류장 제외, 홀수일·짝수일 재현 등. 목록과 근거는 `docs/kpi_changelog.md`
 - 사전등록: 정의는 `docs/kpi_registry.yaml`(v1), 초안 대비 변경·추가 점검·보고 층 추가 이력은 `docs/kpi_changelog.md`
 
+## 시스템 구성
+
+![시스템 구성도](docs/architecture/system-architecture.png)
+
+- 스크립트는 번호 순서로 실행함. 원자료와 일별 Parquet(`data/`)은 저장소에 넣지 않고 01로 다시 받음
+- 05·07은 04의 대응 행·가중치·유효한 날 정의를 그대로 가져다 씀. 06은 원자료를 다시 읽지 않고 `outputs/tables`만 씀
+
+### 기술 스택
+
+![기술 스택](docs/architecture/tech-stack.png)
+
+- DuckDB가 일별 Parquet을 SQL로 직접 집계하고 NumPy·pandas가 부트스트랩 구간과 결과 표를 만듦
+- 고정 버전은 `requirements.txt`에 있음
+- 구성도의 원본 spec은 `docs/architecture/spec/`에 있고, 같은 폴더의 HTML 파일은 브라우저에서 확대해 볼 수 있음
+
 ## 저장소 구조
 
 ```text
 seoul-bus-transfer-gap/
 ├── README.md
+├── NOTICE.md                  구성도 도구·글꼴·로고 출처
 ├── requirements.txt           직접 의존성 고정 버전
 ├── .gitignore
 ├── data/                      git 제외. 01·02 실행으로 생김
@@ -71,7 +89,8 @@ seoul-bus-transfer-gap/
 │   └── interim/days/          일별 Parquet(02 산출)
 ├── docs/
 │   ├── kpi_registry.yaml      지표 사전등록서 v1
-│   └── kpi_changelog.md       초안 대비 변경·추가 점검 이력
+│   ├── kpi_changelog.md       초안 대비 변경·추가 점검 이력
+│   └── architecture/          구성도 PNG·HTML, spec/(구성도 원본 JSON)
 ├── scripts/
 │   ├── 01_download.py         원자료 내려받기, 매니페스트 기록
 │   ├── 02_profile.py          ZIP → 일별 Parquet 변환, 스키마·품질 점검
@@ -202,3 +221,4 @@ python3.12 -m venv .venv
 
 - 이 저장소의 코드에는 별도 라이선스를 부여하지 않음. 저작권은 저장소 소유자에게 있음
 - 원자료와 이를 가공한 `outputs/`의 표·그림은 공공누리 제1유형(출처: 서울특별시)을 따름
+- 구성도 제작 도구·글꼴·로고의 출처와 조건은 `NOTICE.md`에 있음

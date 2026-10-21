@@ -1,0 +1,303 @@
+{
+ "schema_version": 1,
+ "diagram_type": "architecture",
+ "meta": {
+  "title": "기술 스택",
+  "quality_profile": "showcase",
+  "viewBox": [
+   1330,
+   520
+  ],
+  "legend": {
+   "mode": "auto",
+   "entries": {
+    "backend": {
+     "label": "계산·실행"
+    },
+    "database": {
+     "label": "파일 읽기·쓰기"
+    },
+    "frontend": {
+     "label": "시각화"
+    },
+    "security": {
+     "label": "테스트"
+    }
+   }
+  }
+ },
+ "components": [
+  {
+   "id": "python",
+   "type": "backend",
+   "label": "Python",
+   "sublabel": "3.12 · urllib·hashlib·zipfile",
+   "pos": [
+    40,
+    200
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": "python"
+  },
+  {
+   "id": "pyarrow",
+   "type": "database",
+   "label": "pyarrow",
+   "sublabel": "26.0.0 · CSV → Parquet",
+   "pos": [
+    310,
+    200
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://arrow.apache.org/",
+    "sha256": "8fde96c5591883e9bb191e49db5ccf3c1f6077925e1f5589350f531d1d03b0f1"
+   }
+  },
+  {
+   "id": "pytest",
+   "type": "security",
+   "label": "pytest",
+   "sublabel": "9.1.1 · 가상 행 테스트",
+   "pos": [
+    580,
+    360
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://pytest.org/",
+    "sha256": "27055a4e52d49c7593a3cd70624fce09836d5327639f4e67f2da1fd0a65201aa"
+   }
+  },
+  {
+   "id": "duckdb",
+   "type": "backend",
+   "label": "DuckDB",
+   "sublabel": "1.5.6 · Parquet SQL 집계",
+   "pos": [
+    580,
+    200
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://duckdb.org/docs/installation/",
+    "sha256": "91d75b408fb12bfd48ad7af843b37aad3e462a748b8edfb048f5ff3077953d17"
+   }
+  },
+  {
+   "id": "numpy",
+   "type": "backend",
+   "label": "NumPy",
+   "sublabel": "2.5.4 · 부트스트랩·파레토",
+   "pos": [
+    850,
+    40
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://numpy.org/",
+    "sha256": "1a81281c9c02ab8c07b43b233cd2a3cf75ac7908c8b77360fea2604c6b536a9c"
+   }
+  },
+  {
+   "id": "pandas",
+   "type": "backend",
+   "label": "pandas",
+   "sublabel": "3.0.6 · 표 정리·CSV",
+   "pos": [
+    850,
+    200
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://pandas.pydata.org/",
+    "sha256": "ff6e701917e67fa8d8f1ea4749a3a7dae1b1c8dc5e583facd442841b8d2b8146"
+   }
+  },
+  {
+   "id": "openpyxl",
+   "type": "database",
+   "label": "openpyxl",
+   "sublabel": "3.1.5 · 정류장 xlsx 읽기",
+   "pos": [
+    850,
+    360
+   ],
+   "size": [
+    170,
+    72
+   ]
+  },
+  {
+   "id": "matplotlib",
+   "type": "frontend",
+   "label": "matplotlib",
+   "sublabel": "3.11.2 · 그림 3종",
+   "pos": [
+    1120,
+    200
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://matplotlib.org/",
+    "sha256": "a672a58e1f1c7060fb106ef209b1dbe193dbb98a103f0fde910cff9df9ec5e85"
+   }
+  }
+ ],
+ "boundaries": [
+  {
+   "kind": "region",
+   "label": "수집",
+   "wraps": [
+    "python"
+   ]
+  },
+  {
+   "kind": "region",
+   "label": "변환",
+   "wraps": [
+    "pyarrow"
+   ]
+  },
+  {
+   "kind": "region",
+   "label": "테스트",
+   "wraps": [
+    "pytest"
+   ]
+  },
+  {
+   "kind": "region",
+   "label": "집계",
+   "wraps": [
+    "duckdb"
+   ]
+  },
+  {
+   "kind": "region",
+   "label": "통계·표",
+   "wraps": [
+    "numpy",
+    "pandas",
+    "openpyxl"
+   ]
+  },
+  {
+   "kind": "region",
+   "label": "시각화",
+   "wraps": [
+    "matplotlib"
+   ]
+  }
+ ],
+ "connections": [
+  {
+   "id": "python-pyarrow",
+   "from": "python",
+   "to": "pyarrow",
+   "label": "ZIP 안 CSV",
+   "variant": "emphasis"
+  },
+  {
+   "id": "pyarrow-duckdb",
+   "from": "pyarrow",
+   "to": "duckdb",
+   "label": "일별 Parquet",
+   "variant": "emphasis"
+  },
+  {
+   "id": "duckdb-pandas",
+   "from": "duckdb",
+   "to": "pandas",
+   "label": "집계 결과",
+   "variant": "emphasis"
+  },
+  {
+   "id": "duckdb-numpy",
+   "from": "duckdb",
+   "to": "numpy",
+   "label": "경로-일 합계",
+   "fromSide": "top",
+   "toSide": "left",
+   "via": [
+    [
+     665,
+     76
+    ]
+   ],
+   "labelAt": [
+    790,
+    76
+   ]
+  },
+  {
+   "id": "numpy-pandas",
+   "from": "numpy",
+   "to": "pandas",
+   "label": "95% 구간",
+   "labelAt": [
+    935,
+    156
+   ]
+  },
+  {
+   "id": "openpyxl-pandas",
+   "from": "openpyxl",
+   "to": "pandas",
+   "label": "위치·자치구",
+   "labelAt": [
+    935,
+    316
+   ]
+  },
+  {
+   "id": "pandas-matplotlib",
+   "from": "pandas",
+   "to": "matplotlib",
+   "label": "outputs/tables",
+   "variant": "emphasis"
+  },
+  {
+   "id": "pytest-duckdb",
+   "from": "pytest",
+   "to": "duckdb",
+   "label": "가상 행 4개",
+   "variant": "dashed",
+   "labelAt": [
+    665,
+    316
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "dot": "cyan",
+   "title": "버전 고정",
+   "items": [
+    "직접 의존성은 requirements.txt에 고정 버전으로 적음",
+    "04는 git 커밋을 산출물의 method_version에 기록함"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "schema_version": 1,
+ "diagram_type": "architecture",
+ "meta": {
+  "title": "분석 파이프라인",
+  "quality_profile": "showcase",
+  "viewBox": [1130, 600],
+  "legend": {"mode": "auto", "entries": {
+   "external": {"label": "원자료"},
+   "backend": {"label": "계산 단계"},
+   "database": {"label": "사전등록 지표"},
+   "security": {"label": "품질 규칙·검증"}
+  }}
+ },
+ "components": [
+  {"id": "row", "type": "external", "label": "원자료 1행", "sublabel": "날짜·시간대·정류장 쌍", "pos": [40, 40], "size": [170, 72]},
+  {"id": "validity", "type": "security", "label": "품질 규칙 V1·V2", "sublabel": "건수 합·평균 일치", "pos": [40, 170], "size": [170, 72]},
+  {"id": "matched", "type": "backend", "label": "대응 행", "sublabel": "대상·일반 카드 함께 기록", "pos": [40, 300], "size": [170, 72]},
+  {"id": "diff", "type": "backend", "label": "행별 차이·가중치", "sublabel": "대상 − 일반 · 가중치 min(건수)", "pos": [40, 430], "size": [170, 72]},
+  {"id": "path_day", "type": "backend", "label": "경로-일 차이", "sublabel": "가중 평균 · 지지량 5 이상", "pos": [330, 430], "size": [170, 72]},
+  {"id": "eligible", "type": "backend", "label": "자격 경로", "sublabel": "9월 유효 7일·30건 이상", "pos": [330, 300], "size": [170, 72]},
+  {"id": "a1", "type": "database", "label": "A1 환승시간 차이", "sublabel": "경로유형별 · 95% 구간", "pos": [620, 430], "size": [170, 72]},
+  {"id": "a2", "type": "database", "label": "A2 반복률", "sublabel": "차이 > τ 인 날의 비율", "pos": [620, 300], "size": [170, 72]},
+  {"id": "a4", "type": "database", "label": "A4 우선 확인 후보", "sublabel": "차이 > τ · 파레토 층 순", "pos": [620, 170], "size": [170, 72]},
+  {"id": "holdout", "type": "security", "label": "8월·10월 재현", "sublabel": "같은 방향 유지 · 순위상관", "pos": [910, 170], "size": [170, 72]},
+  {"id": "sens", "type": "security", "label": "민감도 81조합", "sublabel": "가중치·날·기록·τ", "pos": [910, 300], "size": [170, 72]},
+  {"id": "control", "type": "security", "label": "대조군", "sublabel": "어린이·청소년 카드", "pos": [910, 430], "size": [170, 72]}
+ ],
+ "boundaries": [
+  {"kind": "region", "label": "행 단위", "wraps": ["row", "validity", "matched", "diff"]},
+  {"kind": "region", "label": "경로 단위 집계", "wraps": ["eligible", "path_day"]},
+  {"kind": "region", "label": "사전등록 지표", "wraps": ["a4", "a2", "a1"]},
+  {"kind": "region", "label": "검증", "wraps": ["holdout", "sens", "control"]}
+ ],
+ "connections": [
+  {"id": "row-validity", "from": "row", "to": "validity", "variant": "emphasis"},
+  {"id": "validity-matched", "from": "validity", "to": "matched", "label": "통과 행", "variant": "emphasis", "labelAt": [125, 271]},
+  {"id": "matched-diff", "from": "matched", "to": "diff", "variant": "emphasis"},
+  {"id": "diff-pathday", "from": "diff", "to": "path_day", "label": "경로·날짜별", "variant": "emphasis"},
+  {"id": "pathday-a1", "from": "path_day", "to": "a1", "label": "유효 경로-일", "variant": "emphasis"},
+  {"id": "pathday-eligible", "from": "path_day", "to": "eligible", "label": "9월 경로별", "labelAt": [415, 401]},
+  {"id": "eligible-a2", "from": "eligible", "to": "a2"},
+  {"id": "eligible-a4", "from": "eligible", "to": "a4", "label": "차이 > τ"},
+  {"id": "a4-holdout", "from": "a4", "to": "holdout", "label": "같은 경로"},
+  {"id": "a4-sens", "from": "a4", "to": "sens", "label": "기준 변경", "variant": "dashed"},
+  {"id": "a1-control", "from": "a1", "to": "control", "label": "같은 계산", "variant": "dashed"}
+ ],
+ "cards": [
+  {"dot": "cyan", "title": "같은 행 비교", "items": [
+   "원자료 한 행은 같은 날·같은 시간대·같은 하차→승차 정류장 쌍이라 경로와 시간 조건이 같음",
+   "가중치는 두 카드 건수 중 작은 값이며 행은 합치지 않음"
+  ]},
+  {"dot": "amber", "title": "후보와 검증", "items": [
+   "후보는 임의 가중 점수 없이 (차이, 기록 수) 파레토 층 순으로 정렬함",
+   "9월에 고른 후보를 8월·10월 1~13일 자료로 다시 계산해 기준선과 비교함"
+  ]}
+ ]
+}

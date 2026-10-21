@@ -1,0 +1,398 @@
+{
+ "schema_version": 1,
+ "diagram_type": "architecture",
+ "meta": {
+  "title": "seoul-bus-transfer-gap 시스템 구성도",
+  "quality_profile": "showcase",
+  "viewBox": [
+   1330,
+   650
+  ],
+  "legend": {
+   "mode": "auto",
+   "entries": {
+    "backend": {
+     "label": "스크립트"
+    },
+    "database": {
+     "label": "데이터·산출물"
+    },
+    "security": {
+     "label": "사전등록"
+    },
+    "external": {
+     "label": "원천"
+    }
+   }
+  }
+ },
+ "components": [
+  {
+   "id": "source",
+   "type": "external",
+   "label": "서울 열린데이터광장",
+   "sublabel": "환승·정류소·자치구 자료",
+   "pos": [
+    40,
+    40
+   ],
+   "size": [
+    170,
+    72
+   ]
+  },
+  {
+   "id": "download",
+   "type": "backend",
+   "label": "01_download.py",
+   "sublabel": "내려받기 · SHA-256",
+   "pos": [
+    40,
+    210
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": "python"
+  },
+  {
+   "id": "raw",
+   "type": "database",
+   "label": "data/raw",
+   "sublabel": "원본 · 매니페스트",
+   "pos": [
+    40,
+    450
+   ],
+   "size": [
+    170,
+    72
+   ]
+  },
+  {
+   "id": "profile",
+   "type": "backend",
+   "label": "02_profile.py",
+   "sublabel": "ZIP → Parquet",
+   "pos": [
+    310,
+    210
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://arrow.apache.org/",
+    "sha256": "8fde96c5591883e9bb191e49db5ccf3c1f6077925e1f5589350f531d1d03b0f1"
+   }
+  },
+  {
+   "id": "days",
+   "type": "database",
+   "label": "data/interim/days",
+   "sublabel": "일별 Parquet · 74일",
+   "pos": [
+    310,
+    450
+   ],
+   "size": [
+    170,
+    72
+   ]
+  },
+  {
+   "id": "registry",
+   "type": "security",
+   "label": "kpi_registry.yaml",
+   "sublabel": "사전등록 v1",
+   "pos": [
+    580,
+    40
+   ],
+   "size": [
+    170,
+    72
+   ]
+  },
+  {
+   "id": "kpis",
+   "type": "backend",
+   "label": "04_kpis.py",
+   "sublabel": "지표 A1~A5 · 재현",
+   "pos": [
+    580,
+    210
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://duckdb.org/docs/installation/",
+    "sha256": "91d75b408fb12bfd48ad7af843b37aad3e462a748b8edfb048f5ff3077953d17"
+   }
+  },
+  {
+   "id": "extra",
+   "type": "backend",
+   "label": "05·07 추가 점검",
+   "sublabel": "사전등록 외",
+   "pos": [
+    850,
+    210
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://numpy.org/",
+    "sha256": "1a81281c9c02ab8c07b43b233cd2a3cf75ac7908c8b77360fea2604c6b536a9c"
+   }
+  },
+  {
+   "id": "tables",
+   "type": "database",
+   "label": "outputs/tables",
+   "sublabel": "지표·후보 CSV",
+   "pos": [
+    850,
+    450
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://pandas.pydata.org/",
+    "sha256": "ff6e701917e67fa8d8f1ea4749a3a7dae1b1c8dc5e583facd442841b8d2b8146"
+   }
+  },
+  {
+   "id": "figures_py",
+   "type": "backend",
+   "label": "06_figures.py",
+   "sublabel": "그림 3종",
+   "pos": [
+    1120,
+    210
+   ],
+   "size": [
+    170,
+    72
+   ],
+   "brand": {
+    "url": "https://matplotlib.org/",
+    "sha256": "a672a58e1f1c7060fb106ef209b1dbe193dbb98a103f0fde910cff9df9ec5e85"
+   }
+  },
+  {
+   "id": "figures",
+   "type": "database",
+   "label": "outputs/figures",
+   "sublabel": "PNG 300dpi",
+   "pos": [
+    1120,
+    450
+   ],
+   "size": [
+    170,
+    72
+   ]
+  }
+ ],
+ "boundaries": [
+  {
+   "kind": "region",
+   "label": "원천",
+   "wraps": [
+    "source"
+   ]
+  },
+  {
+   "kind": "region",
+   "label": "scripts/ · 번호 순서로 실행",
+   "wraps": [
+    "download",
+    "profile",
+    "kpis",
+    "extra",
+    "figures_py"
+   ]
+  },
+  {
+   "kind": "region",
+   "label": "docs/",
+   "wraps": [
+    "registry"
+   ]
+  },
+  {
+   "kind": "region",
+   "label": "data/ · git 제외",
+   "wraps": [
+    "raw",
+    "days"
+   ]
+  },
+  {
+   "kind": "region",
+   "label": "outputs/ · 커밋",
+   "wraps": [
+    "tables",
+    "figures"
+   ]
+  }
+ ],
+ "connections": [
+  {
+   "id": "source-download",
+   "from": "source",
+   "to": "download",
+   "label": "ZIP · xlsx",
+   "variant": "emphasis",
+   "labelAt": [
+    125,
+    161
+   ]
+  },
+  {
+   "id": "download-raw",
+   "from": "download",
+   "to": "raw",
+   "label": "원본 그대로 저장",
+   "variant": "emphasis",
+   "labelAt": [
+    125,
+    366
+   ]
+  },
+  {
+   "id": "raw-profile",
+   "from": "raw",
+   "to": "profile",
+   "label": "ZIP",
+   "variant": "emphasis"
+  },
+  {
+   "id": "profile-days",
+   "from": "profile",
+   "to": "days",
+   "label": "일별 변환",
+   "variant": "emphasis",
+   "labelAt": [
+    395,
+    366
+   ]
+  },
+  {
+   "id": "days-kpis",
+   "from": "days",
+   "to": "kpis",
+   "label": "DuckDB SQL",
+   "variant": "emphasis"
+  },
+  {
+   "id": "raw-kpis",
+   "from": "raw",
+   "to": "kpis",
+   "label": "정류장 xlsx",
+   "variant": "dashed",
+   "fromSide": "bottom",
+   "toSide": "bottom",
+   "via": [
+    [
+     125,
+     580
+    ],
+    [
+     665,
+     580
+    ]
+   ],
+   "labelAt": [
+    395,
+    580
+   ]
+  },
+  {
+   "id": "registry-kpis",
+   "from": "registry",
+   "to": "kpis",
+   "label": "정의 고정",
+   "variant": "dashed",
+   "labelAt": [
+    665,
+    161
+   ]
+  },
+  {
+   "id": "kpis-extra",
+   "from": "kpis",
+   "to": "extra",
+   "label": "정의 재사용",
+   "variant": "dashed"
+  },
+  {
+   "id": "kpis-tables",
+   "from": "kpis",
+   "to": "tables",
+   "label": "사전등록 지표",
+   "variant": "emphasis"
+  },
+  {
+   "id": "extra-tables",
+   "from": "extra",
+   "to": "tables",
+   "label": "추가 점검",
+   "labelAt": [
+    935,
+    366
+   ]
+  },
+  {
+   "id": "tables-figures-py",
+   "from": "tables",
+   "to": "figures_py",
+   "label": "표만 읽음"
+  },
+  {
+   "id": "figures-py-figures",
+   "from": "figures_py",
+   "to": "figures",
+   "label": "그림 1~3",
+   "labelAt": [
+    1205,
+    366
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "dot": "cyan",
+   "title": "사전등록과 추가 점검의 구분",
+   "items": [
+    "지표 정의(docs/kpi_registry.yaml)는 카드 유형 간 차이를 계산하기 전에 커밋함",
+    "05·07은 사전등록 외 추가 점검이며 변경 이력은 docs/kpi_changelog.md에 남김"
+   ]
+  },
+  {
+   "dot": "emerald",
+   "title": "재현성",
+   "items": [
+    "01이 파일마다 받은 시각·크기·SHA-256을 매니페스트에 기록함",
+    "04가 산출물의 method_version에 git 커밋을 기록하고 부트스트랩 seed를 고정함"
+   ]
+  },
+  {
+   "dot": "amber",
+   "title": "데이터 경계",
+   "items": [
+    "원자료와 일별 Parquet(data/)은 저장소에 넣지 않고 01로 다시 받음",
+    "06은 원자료를 다시 읽지 않고 outputs/tables만 씀"
+   ]
+  }
+ ]
+}
